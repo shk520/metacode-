@@ -23,6 +23,7 @@ html {
         cursor: pointer;
         text-decoration: none;
     }
+    
     /* #region头部导航条开始 */
     .nav-container {
         width: 100%;
@@ -39,16 +40,9 @@ html {
         height: 100%;
     }
     .nav-wrapper ul {
-        list-style-type: disc;
         margin-block-start: 1em;
         margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 40px;
         list-style: none;
-    }
-    .nav-wrapper li {
-        display: list-item;
     }
     .nav-container .nav-wrapper .logo-wrapper {
         font-size: 0;
@@ -73,9 +67,6 @@ html {
         font-size: 0;
         line-height: 0;
         display: inline-block;
-    }
-    .nav-container .right-router-link li{
-        flex: 1;
     }
     .nav-container #index.active {
         background-image: url(./index_hover.png);
@@ -116,6 +107,13 @@ html {
         padding: 0;
         z-index: 1;
     }
+    #in-container{
+        position: relative;
+        width: 1644px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden; /*溢出隐藏：只显示一张图片*/
+    }
     .swiper-slide{
         width:1644px;
         height:599px;
@@ -129,56 +127,20 @@ html {
         position: absolute;
         display: flex;
     }
-    .swiper-slide .banner-img-container li {
-        width: 100%;
-    }
-
-    .swiper-container img {
-        width: 100%;
-        vertical-align: bottom;
-    }
-    .swiper-slide .banner-img-container img{
-        float: left;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    #in-container{
-        position: relative;
-        width: 1644px;
-        height: 100%;
-        margin: 0 auto;
-        overflow: hidden; /*溢出隐藏：只显示一张图片*/
-    }
-    #in-container ul{
-        width: 100%;
-        list-style: none;
-        overflow: hidden;
-        position: absolute;
-        display: flex;
-    }
     #in-container .parent{
-        width: 100%;
-        list-style: none;
-        overflow: hidden;
-        position: absolute;
-        display: flex;
-        position: absolute;
         width: 4932px; /*整个图片层长度：1644*3=4932*/
         height: 599px;
     }
-    #in-container .parent li{
-        float: left;
-        position:relative;
-        overflow:hidden;
-        min-width: 1644px;
+    #in-container ul{
+        list-style: none;
+        overflow: hidden;
+        position: absolute;
+        display: flex;
     }
-    #in-container .parent li img{
-        max-width:none;
-        width:100%;
-        position:absolute;
-        vertical-align: bottom;
+    .swiper-slide .banner-img-container img{
+        width: 100%;
     }
+
     /* 左右按钮 */
     .btnLeft {
     left: 10px;
@@ -215,18 +177,13 @@ html {
         opacity: 1 !important;
         border-radius: 0 !important;
     }
-    #in-container .clearfix {
+    #in-container .middlefix {
     bottom: 30px !important;
     left: 0;
     width: 100%;
     display: block;
     text-align: center;
     z-index: 2;
-    }
-    #in-container .clearfix::after{
-        content: "";
-        display: block;
-        clear: both;
     }
     .on{
         background-image: url(./下方滚动条.png)
@@ -236,16 +193,10 @@ html {
     }
     /* #endregion轮播图结束 */
     
+
     /* #region页脚开始 */
     .footer {
-        width: 100%;
-        height: 250px;
-        margin: 0 auto;
-        position: relative;
         background-image: url(./bg\ \(1\).png);
-        color: #707070;
-        clear: both;
-        overflow: hidden;
     }
     .footer .foot-container {
         width: 1200px;
@@ -254,18 +205,15 @@ html {
         overflow: hidden;
     }
     .footer .foot-container .foot-logo {
-        position: relative;
         margin-top: 65px;
         height: 93px;
         width: 273px;
         float: left;
-        display: block;
     }
     .footer .foot-container .foot-logo>img {
         max-height: 80%;
     }
     .footer .foot-container .foot-text {
-        position: relative;
         float: left;
         display: block;
         margin-top: 15px;
