@@ -21,6 +21,11 @@ a {
     background-image: repeating-linear-gradient(-45deg,transparent,transparent 5px,rgba(238,241,246,.4) 2px,rgba(238,241,246,.4) 7px);
     overflow-y: hidden;
 }
+@media screen and (min-width: 1675px) {
+    .main-container {
+        min-height:1100px
+    }
+}
 /* 头部粘性导航栏 */
 .header {
     position: fixed;
@@ -39,9 +44,6 @@ a {
     width: 130px;
     height: 45px;
     background-size: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer
 }
 /* 主体内容 */
@@ -67,7 +69,11 @@ a {
     transform: translate(-50%);
     display: flex;
     justify-content: space-between;
-    transform:translate(-50%) scale(calc(1660 / 1920))
+}
+@media screen and (max-width: 1675px) {
+    .content-container {
+        transform:translate(-50%) scale(calc(1660 / 1920))
+    }
 }
 .content-container>.left-section {
     width: 998px;
@@ -76,7 +82,6 @@ a {
     background-size: 100% 100%
 }
 .content-container>.right-section {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -103,6 +108,12 @@ a {
     opacity: 1;
     cursor: pointer;
     margin-right: 8px;
+}
+.content-container>.right-section .choice1:hover {
+    opacity: .9
+}
+.content-container>.right-section .choice2:hover {
+    opacity: .9
 }
 .content-container>.right-section .choice2 {
     background: url(./库街区choice2.png);
@@ -185,7 +196,6 @@ a {
 
 /* #region页脚开始 */
 .footer {
-    position: absolute;
     bottom: auto;
     background: #292b2f;
     width: 100%;
@@ -268,7 +278,6 @@ a {
 }
 /* 线下部分 */
 .list {
-    display: inline-block;
     width: 200px;
     height: auto
 }
